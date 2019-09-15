@@ -51,16 +51,14 @@ public class ChipotleJrPlusOOP {
 
         public static void main(String[] args){
 
-        //double price;
-
-        // Using lambda to return a random element from ArrayList
+        // Using lambda Expression to return a random element from ArrayList
         ChipotleElement ce = list -> {
             String rndElement = (String) list.get((int) (Math.random() * list.size()));
             return rndElement;
         };
 
 
-        // Using lambda to calculate price
+        // Using lambda Expresiion to calculate price
         ChipotlePrice cp = list -> {
             double price = 3.00 + (0.5 * (list.size() - Collections.frequency(list, "none")) +
                 (Collections.frequency(list, "rice_all")*0.5) +
@@ -72,6 +70,7 @@ public class ChipotleJrPlusOOP {
         };
 
 
+        // Creating ArrayList
         List<String> Rice = Arrays.asList("white_rice", "brown_rice", "none", "rice_all");//rice_all = 2
         List<String> Meat = Arrays.asList("chicken", "steak","carnidas", "chorizo", "sofritas", "veggies", "none", "meat_all");//meat_all = 6
         List<String> Beans = Arrays.asList("pinto", "black", "none");
